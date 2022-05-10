@@ -23,6 +23,14 @@ requests
 pip install requests
 ```
 
+## 必要なフォント
+Meiryo UI 標準(meiryo.ttc)  
+Roboto-Regular.ttf  
+  
+メイリオフォントはWindowsを使用している場合`C:\Windows\Fonts\Meiryo UI`にあります  
+RobotoフォントはGoogle Fontsで公開されているので[ここ](https://fonts.google.com/specimen/Roboto?subset=japanese)からダウンロードしてください
+
+
 ## 使い方
 
 実行時に`main.py`と同じディレクトリに`token.txt`が存在しない場合、トークンを設定するためのGUIが起動します  
