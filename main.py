@@ -9,11 +9,15 @@ import requests
 import textwrap
 import tkinter
 
+#トークンを保存するファイルのパス
+path = os.path.dirname(__file__)
+path = path + '\\token.txt'
+
 #以下GUI処理
 #トークンの保存
 def button_save():
     text = textbox.get()
-    file = open('token.txt','w')
+    file = open(path,'w')
     file.write(text)
     file.close()
 
@@ -22,7 +26,7 @@ def button_quit():
     window.destroy()
 
 #トークンが設定済みか確認
-if os.path.isfile('token.txt') != True:
+if os.path.isfile(path) != True:
     #トークン未設定
     #GUIの設定
     window = tkinter.Tk()
@@ -42,7 +46,7 @@ if os.path.isfile('token.txt') != True:
     window.mainloop()
 
 #トークンの読み込み
-file = open('token.txt','r')
+file = open(path,'r')
 text = file.read()
 file.close()
 #トークンの設定
@@ -93,11 +97,15 @@ def set_text(val):
         i = int(value)
     except ValueError:
         do = True
+    except TypeError:
+        do = True
     if do:
         value = val[1]
         try:
-            i = int(val)
+            i = int(value)
         except ValueError:
+            do = False
+        except TypeError:
             do = False
         if do:
             is_first = True
