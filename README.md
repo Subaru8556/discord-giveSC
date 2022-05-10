@@ -28,7 +28,8 @@ Meiryo UI 標準(meiryo.ttc)
 Roboto-Regular.ttf  
   
 メイリオフォントはWindowsを使用している場合`C:\Windows\Fonts\Meiryo UI`にあります  
-RobotoフォントはGoogle Fontsで公開されているので[ここ](https://fonts.google.com/specimen/Roboto?subset=japanese)からダウンロードしてください
+RobotoフォントはGoogle Fontsで公開されているので[ここ](https://fonts.google.com/specimen/Roboto?subset=japanese)からダウンロードしてください  
+フォントはassetフォルダに配置してください
 
 
 ## 使い方
